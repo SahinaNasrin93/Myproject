@@ -56,15 +56,16 @@
    		}
 	} 
 	else{
-			echo "Something is wrong";
+			header("location:register.php?m=Connection failed");
+      		exit;
 		}
 	}
 	else
 	{
 			setcookie("name", $name);
-			setcookie("eml", $email);
-			setcookie("phn", $phone);
-			setcookie("pass", $password);
+			setcookie("email", $email);
+			setcookie("phone", $phone);
+			setcookie("passwd", $password);
 
 			header("location:register.php?m=Email already exists");
       		exit;	
