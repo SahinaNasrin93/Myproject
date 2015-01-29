@@ -1,12 +1,16 @@
 <html>
 <head>
+<?php
+session_start();
+if (!(isset($_SESSION['db']))) {
+?>
     <link rel="stylesheet" type="text/css" href="regs.css">
 </head>
 
 <body>
     <div id="upar">
         <div id="image"><img src="logo.png" height="45" width="180"></div>
-            <div id="right"><a href="hello.php">LOGIN</a></div>
+            <div id="right"><a href="index.php">LOGIN</a></div>
         </div>
     <div id="Content">
     <center>
@@ -38,4 +42,44 @@
     </center>
     </div>
 </body>
+<?php
+}
+else
+{
+	session_start();
+	$_SESSION['db']=1;
+?>
+	 <link rel="stylesheet" type="text/css" href="regs.css">
+</head>
+
+<body>
+    <div id="upar">
+        <div id="image"><img src="logo.png" height="45" width="180"></div>
+        </div>
+    <div id="Content">
+    <center>
+    <?php
+        if($_GET['m'])
+        {
+        	$m=$_GET['m'];
+
+        ?>
+            <div id="echo"><label id="labl"><?php echo $m; ?></label></div><br>
+        <?php
+        }
+        else
+        {
+        ?>
+        	<div id="echo"><label id="labl">Database has been created</label></div><br>
+        <?php
+        }
+        ?>
+        <a id="anchor" href="index.php">LOGIN</a><br><a id="anchor" href="register.php">REGISTER</a>
+        </center>
+        </div>
+        </body>
+<?php
+}
+?>
+
 </html>

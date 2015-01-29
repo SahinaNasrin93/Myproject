@@ -21,7 +21,7 @@
 			exit;
 			}
 			else {
-				header("location:hello.php?m=Invalid credentials");
+				header("location:index.php?m=Invalid credentials");
 			}
 		}
 		$sql="SELECT * FROM user WHERE username='$username' and password='$password'";
@@ -38,7 +38,7 @@
 			$cookie_name = "username";
 			$cookie_value = $username;
 			setcookie($cookie_name, $cookie_value);
-			header("location:hello.php?m=Invalid credentials");
+			header("location:index.php?m=Invalid credentials");
 			}
 
 ?>

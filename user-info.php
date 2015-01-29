@@ -2,7 +2,7 @@
     session_start();
 
     if (!(isset($_SESSION['super']))) {
-        header ("Location: hello.php");
+        header ("Location: index.php");
     }
     else
     {

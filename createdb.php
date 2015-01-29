@@ -52,7 +52,9 @@
 
 				echo file_put_contents("dbcon.php",join("\n",$data));
 
-				header("location:database.php?m=Table created Successfully");
+				session_start();
+				$_SESSION['db']=1;
+				header("location:database.php?m=Database created Successfully");
 			}
 
 		} else {

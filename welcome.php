@@ -65,7 +65,7 @@
 			setcookie("name", $name);
 			setcookie("email", $email);
 			setcookie("phone", $phone);
-			setcookie("passwd", $password);
+			setcookie("radio", $gender);
 
 			header("location:register.php?m=Email already exists");
       		exit;	

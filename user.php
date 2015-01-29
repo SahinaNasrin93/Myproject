@@ -61,7 +61,7 @@
 	else
 	{
 	?>
-		<div id="right"><a href="hello.php">LOGIN</a></div>
+		<div id="right"><a href="index.php">LOGIN</a></div>
 	<?php
 	}
 	?>
